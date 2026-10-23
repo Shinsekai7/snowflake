@@ -1,0 +1,60 @@
+{
+	"name": "@shinsekai/snowflake",
+	"version": "1.0.0",
+	"description": "Snowflake IDs with BigInts that are unique and increasing",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Shinsekai7/snowflake.git"
+	},
+	"homepage": "https://github.com/Shinsekai7/snowflake#readme",
+	"bugs": {
+		"url": "https://github.com/Shinsekai7/snowflake/issues"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		}
+	},
+	"unpkg": "./dist/index.global.js",
+	"sideEffects": false,
+	"files": [
+		"dist/",
+		"LICENSE",
+		"README.md"
+	],
+	"engines": {
+		"node": ">=18"
+	},
+	"scripts": {
+		"build": "tsup",
+		"test": "vitest run",
+		"typecheck": "tsc --noEmit"
+	},
+	"keywords": [
+		"snowflake",
+		"id",
+		"bigint",
+		"discord",
+		"twitter"
+	],
+	"devDependencies": {
+		"tsup": "^8.5.1",
+		"typescript": "^5.9.3",
+		"vitest": "^4.1.5"
+	}
+}
